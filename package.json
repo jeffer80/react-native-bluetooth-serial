@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rusel1989/react-native-bluetooth-serial.git"
+    "url": "git+https://github.com/jeffer80/react-native-bluetooth-serial.git"
   },
   "keywords": [
     "bluetooth",
@@ -17,9 +17,9 @@
   "author": "Jakub Martyčák <martycakjakub@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rusel1989/react-native-bluetooth-serial/issues"
+    "url": "https://github.com/jeffer80/react-native-bluetooth-serial/issues"
   },
-  "homepage": "https://github.com/rusel1989/react-native-bluetooth-serial#readme",
+  "homepage": "https://github.com/jeffer80/react-native-bluetooth-serial#readme",
   "dependencies": {
     "buffer": "^4.6.0"
   },
