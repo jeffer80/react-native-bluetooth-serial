@@ -35,6 +35,7 @@ public class RCTBluetoothSerialModule extends ReactContextBaseJavaModule impleme
     private static final boolean D = true;
 
     // Event names
+    private static final String BT_FOUND = "bluetoothFound";
     private static final String BT_ENABLED = "bluetoothEnabled";
     private static final String BT_DISABLED = "bluetoothDisabled";
     private static final String CONN_SUCCESS = "connectionSuccess";
@@ -57,6 +58,7 @@ public class RCTBluetoothSerialModule extends ReactContextBaseJavaModule impleme
     private Promise mEnabledPromise;
     private Promise mConnectedPromise;
     private Promise mDeviceDiscoveryPromise;
+    private Promise mDeviceFoundPromise;
     private Promise mPairDevicePromise;
     private String delimiter = "";
 
@@ -652,6 +654,8 @@ public class RCTBluetoothSerialModule extends ReactContextBaseJavaModule impleme
                     BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                     WritableMap d = deviceToWritableMap(device);
                     unpairedDevices.pushMap(d);
+                    // trigger the bluetoothFound event
+                    sendEvent(BT_FOUND, d);
                 } else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
                     if (D) Log.d(TAG, "Discovery finished");
                     if (mDeviceDiscoveryPromise != null) {
