@@ -655,7 +655,7 @@ public class RCTBluetoothSerialModule extends ReactContextBaseJavaModule impleme
                     WritableMap d = deviceToWritableMap(device);
                     unpairedDevices.pushMap(d);
                     // trigger the bluetoothFound event
-                    sendEvent(BT_FOUND, d);
+                    sendEvent(BT_FOUND, deviceToWritableMap(device));
                 } else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
                     if (D) Log.d(TAG, "Discovery finished");
                     if (mDeviceDiscoveryPromise != null) {
