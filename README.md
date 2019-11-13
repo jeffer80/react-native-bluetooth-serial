@@ -102,6 +102,7 @@ to true when write was successful, otherwise rejects with error.
 You can listen to few event with `BluetoothSerial.on(eventName, callback)`
 
 Currently provided events are:
+- `bluetoothFound` - when bluetooth found
 - `bluetoothEnabled` - when user enabled bt
 - `bluetoothDisabled` - when user disabled bt
 - `connectionSuccess` - when app connected to device
