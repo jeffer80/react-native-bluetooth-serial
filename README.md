@@ -7,12 +7,14 @@ android and ios
 Officialy this library supports React Native >= 0.25, it may run on older versions but no guarantees.
 
 ## Installation
-1. Install package via npm: `npm i -S react-native-bluetooth-serial`
+1. Install package via npm: `npm i -S react-native-bluetooth-serial-cvk`
 2. Link libraries with: `rnpm link` or `react-native link` for React Native >= 0.27
 3. For android you also need to put following code to `AndroidManifest.xml`
 ```
 <uses-permission android:name="android.permission.BLUETOOTH" />
 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 ```
 
 ## Manual installation
