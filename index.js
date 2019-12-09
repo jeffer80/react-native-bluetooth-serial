@@ -22,6 +22,13 @@ BluetoothSerial.removeListener = (eventName, handler) => {
 }
 
 /**
+ * Remove all listener of event
+ */
+BluetoothSerial.removeAllListener = (eventName) => {
+  DeviceEventEmitter.removeAllListeners(eventName)
+}
+
+/**
  * Write data to device, you can pass string or buffer,
  * We must convert to base64 in RN there is no way to pass buffer directly
  * @param  {Buffer|String} data

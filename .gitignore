@@ -37,3 +37,7 @@ npm-debug.log
 .vscode
 jsconfig.json
 *.sublime-workspace
+android/.project
+android/.settings/org.eclipse.buildship.core.prefs
+BluetoothSerialExample/.project
+BluetoothSerialExample/.settings/org.eclipse.buildship.core.prefs
