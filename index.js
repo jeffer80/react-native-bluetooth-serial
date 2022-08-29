@@ -9,23 +9,25 @@ const BluetoothSerial = NativeModules.BluetoothSerial
  * @param  {Function} handler Event handler
  */
 BluetoothSerial.on = (eventName, handler) => {
-  DeviceEventEmitter.addListener(eventName, handler)
+	return DeviceEventEmitter.addListener(eventName, handler)
 }
 
 /**
  * Stop listening for event
  * @param  {String} eventName Name of event one of connectionSuccess, connectionLost, data, rawData
  * @param  {Function} handler Event handler
+ *
+ * @deprecated Use `remove` on the EventSubscription from `addListener`.
  */
 BluetoothSerial.removeListener = (eventName, handler) => {
-  DeviceEventEmitter.removeListener(eventName, handler)
+	DeviceEventEmitter.removeListener(eventName, handler)
 }
 
 /**
  * Remove all listener of event
  */
-BluetoothSerial.removeAllListener = (eventName) => {
-  DeviceEventEmitter.removeAllListeners(eventName)
+BluetoothSerial.removeAllListener = eventName => {
+	DeviceEventEmitter.removeAllListeners(eventName)
 }
 
 /**
@@ -34,11 +36,11 @@ BluetoothSerial.removeAllListener = (eventName) => {
  * @param  {Buffer|String} data
  * @return {Promise<Boolean>}
  */
-BluetoothSerial.write = (data) => {
-  if (typeof data === 'string') {
-    data = new Buffer(data)
-  }
-  return BluetoothSerial.writeToDevice(data.toString('base64'))
+BluetoothSerial.write = data => {
+	if (typeof data === 'string') {
+		data = Buffer.from(data)
+	}
+	return BluetoothSerial.writeToDevice(data.toString('base64'))
 }
 
 module.exports = BluetoothSerial

@@ -1,29 +1,29 @@
 {
-  "name": "react-native-bluetooth-serial-cvk",
-  "version": "1.0.5",
-  "description": "'Bluetooth serial for react native'",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jeffer80/react-native-bluetooth-serial.git"
-  },
-  "keywords": [
-    "bluetooth",
-    "react-native"
-  ],
-  "author": "Jakub Martyčák <martycakjakub@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jeffer80/react-native-bluetooth-serial/issues"
-  },
-  "homepage": "https://github.com/jeffer80/react-native-bluetooth-serial#readme",
-  "dependencies": {
-    "buffer": "^4.6.0"
-  },
-  "peerDependencies": {
-    "react-native": ">=0.40"
-  }
+	"name": "react-native-bluetooth-serial-cvk",
+	"version": "1.0.5",
+	"description": "'Bluetooth serial for react native'",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jeffer80/react-native-bluetooth-serial.git"
+	},
+	"keywords": [
+		"bluetooth",
+		"react-native"
+	],
+	"author": "Jakub Martyčák <martycakjakub@gmail.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jeffer80/react-native-bluetooth-serial/issues"
+	},
+	"homepage": "https://github.com/jeffer80/react-native-bluetooth-serial#readme",
+	"dependencies": {
+		"buffer": "^6.0.3"
+	},
+	"peerDependencies": {
+		"react-native": ">=0.40"
+	}
 }
