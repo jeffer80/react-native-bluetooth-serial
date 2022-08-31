@@ -1,5 +1,5 @@
 {
-	"name": "react-native-bluetooth-serial-cvk",
+	"name": "react-native-bluetooth-serial",
 	"version": "1.0.5",
 	"description": "'Bluetooth serial for react native'",
 	"main": "index.js",
